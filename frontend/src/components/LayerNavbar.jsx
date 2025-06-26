@@ -6,7 +6,7 @@ import BatchNorm from "../assets/BatchNorm.svg";
 import Dropout from "../assets/Dropout.svg";
 import Linear from "../assets/Linear.svg";
 import MaxPool2D from "../assets/MaxPool2D.svg";
-import PReLU from "../assets/PReLU.svg";
+import PReLU from "../assets/PreLU.svg";
 import Skip from "../assets/skip_layer.svg";
 import Tanh from "../assets/tanh.svg";
 import Flatten from "../assets/Flatten.svg";
