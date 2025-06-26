@@ -37,7 +37,7 @@ A visual neural network builder built with React and React Flow, designed to let
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/neuroStak.git
+git clone https://github.com/luanch2016/neuroStak.git
 cd neuroStak
 ```
 
