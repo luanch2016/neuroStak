@@ -1,0 +1,7 @@
+<svg id="currentIcon" width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-labelledby="cnnIconTitle" role="img"> 
+    <title>Add Icon</title>
+    <rect x="35" y="35" width="30" height="30" fill="#a5b4fc" opacity="0.7"/>
+    <rect x="35" y="35" width="30" height="30" fill="#a7f3d0" opacity="0.7"/>
+    <line x1="50" y1="45" x2="50" y2="55" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <line x1="45" y1="50" x2="55" y2="50" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>

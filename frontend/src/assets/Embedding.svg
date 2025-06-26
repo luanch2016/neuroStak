@@ -1,0 +1,6 @@
+<svg id="currentIcon" width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-labelledby="cnnIconTitle" role="img"> 
+    <title>Embedding Icon</title>
+    <text x="25" y="60" font-family="Inter, sans-serif" font-size="30" text-anchor="middle" fill="#4f46e5">W</text>
+    <path d="M 40 50 L 50 50 L 50 45 L 60 55 L 50 65 L 50 60 L 40 60 Z" fill="#4b5563"/>
+    <rect x="70" y="40" width="15" height="20" fill="#a5b4fc" stroke="#4f46e5" stroke-width="1"/>
+</svg>

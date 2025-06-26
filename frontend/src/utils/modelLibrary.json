@@ -1,0 +1,563 @@
+[
+  {
+    "name": "Simple CNN",
+    "nodes": [
+      {
+        "id": "input",
+        "type": "input",
+        "position": {
+          "x": 100,
+          "y": 50
+        },
+        "data": {
+          "layerType": "Input Layer",
+          "label": "Input Layer",
+          "params": {}
+        }
+      },
+      {
+        "id": "node_1",
+        "type": "default",
+        "position": {
+          "x": 100,
+          "y": 118.5
+        },
+        "data": {
+          "layerType": "Conv2d",
+          "label": "Conv2d Layer",
+          "params": {
+            "in_channels": 1,
+            "out_channels": "8",
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 0
+          }
+        }
+      },
+      {
+        "id": "node_2",
+        "type": "default",
+        "position": {
+          "x": 101,
+          "y": 229.5
+        },
+        "data": {
+          "layerType": "ReLU",
+          "label": "ReLU Layer",
+          "params": {}
+        }
+      },
+      {
+        "id": "node_3",
+        "type": "default",
+        "position": {
+          "x": 101,
+          "y": 302.5
+        },
+        "data": {
+          "layerType": "MaxPool2d",
+          "label": "MaxPool2d Layer",
+          "params": {}
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "reactflow__edge-input-node_1",
+        "source": "input",
+        "target": "node_1",
+        "label": "",
+        "style": {
+          "stroke": "#4b5563",
+          "strokeDasharray": "",
+          "strokeWidth": 2
+        }
+      },
+      {
+        "id": "reactflow__edge-node_1-node_2",
+        "source": "node_1",
+        "target": "node_2",
+        "label": "",
+        "style": {
+          "stroke": "#4b5563",
+          "strokeDasharray": "",
+          "strokeWidth": 2
+        }
+      },
+      {
+        "id": "reactflow__edge-node_2-node_3",
+        "source": "node_2",
+        "target": "node_3",
+        "label": "",
+        "style": {
+          "stroke": "#4b5563",
+          "strokeDasharray": "",
+          "strokeWidth": 2
+        }
+      }
+    ]
+  },
+  {
+    "name": "MLP",
+    "nodes": [
+      {
+        "id": "1",
+        "type": "default",
+        "position": {
+          "x": 100,
+          "y": 150
+        },
+        "data": {
+          "label": "Input Layer",
+          "layerType": "Input",
+          "params": {
+            "shape": "[784]"
+          }
+        }
+      },
+      {
+        "id": "2",
+        "type": "default",
+        "position": {
+          "x": 300,
+          "y": 150
+        },
+        "data": {
+          "label": "Linear Layer",
+          "layerType": "Linear",
+          "params": {
+            "in_features": 784,
+            "out_features": 128
+          }
+        }
+      },
+      {
+        "id": "3",
+        "type": "default",
+        "position": {
+          "x": 500,
+          "y": 150
+        },
+        "data": {
+          "label": "ReLU Layer",
+          "layerType": "ReLU",
+          "params": {}
+        }
+      },
+      {
+        "id": "4",
+        "type": "default",
+        "position": {
+          "x": 700,
+          "y": 150
+        },
+        "data": {
+          "label": "Linear Layer",
+          "layerType": "Linear",
+          "params": {
+            "in_features": 128,
+            "out_features": 10
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1-2",
+        "source": "1",
+        "target": "2"
+      },
+      {
+        "id": "e2-3",
+        "source": "2",
+        "target": "3"
+      },
+      {
+        "id": "e3-4",
+        "source": "3",
+        "target": "4"
+      }
+    ]
+  }
+,
+  {
+    "name": "ResNet18",
+    "nodes": [
+      {
+        "id": "1",
+        "type": "default",
+        "position": { "x": 100, "y": 50 },
+        "data": {
+          "layerType": "Input",
+          "label": "Input Layer",
+          "params": { "shape": "[3, 224, 224]" }
+        }
+      },
+      {
+        "id": "2",
+        "type": "default",
+        "position": { "x": 99.98186246656624, "y": 133.78669073861593 },
+        "data": {
+          "layerType": "Conv2d",
+          "label": "Conv2d Layer",
+          "params": {
+            "in_channels": 3,
+            "out_channels": 64,
+            "kernel_size": 7,
+            "stride": 2,
+            "padding": 3
+          }
+        }
+      },
+      {
+        "id": "3",
+        "type": "default",
+        "position": { "x": 99.96372493313245, "y": 256.56253543034524 },
+        "data": {
+          "layerType": "MaxPool2d",
+          "label": "MaxPool2d Layer",
+          "params": {
+            "kernel_size": 3,
+            "stride": 2,
+            "padding": 1
+          }
+        }
+      },
+      {
+        "id": "4",
+        "type": "default",
+        "position": { "x": 100.07303758279816, "y": 338.8537226453194 },
+        "data": {
+          "layerType": "ResidualBlock",
+          "label": "Residual Block",
+          "params": {
+            "in_channels": 64,
+            "out_channels": 64,
+            "num_blocks": 2
+          }
+        }
+      },
+      {
+        "id": "5",
+        "type": "default",
+        "position": { "x": 100.25180170779106, "y": 458.79986028775846 },
+        "data": {
+          "layerType": "ResidualBlock",
+          "label": "Residual Block",
+          "params": {
+            "in_channels": 64,
+            "out_channels": 128,
+            "num_blocks": 2,
+            "downsample": true
+          }
+        }
+      },
+      {
+        "id": "6",
+        "type": "default",
+        "position": { "x": 100.59501973926808, "y": 588.4992673144006 },
+        "data": {
+          "layerType": "ResidualBlock",
+          "label": "Residual Block",
+          "params": {
+            "in_channels": 128,
+            "out_channels": 256,
+            "num_blocks": 2,
+            "downsample": true
+          }
+        }
+      },
+      {
+        "id": "7",
+        "type": "default",
+        "position": { "x": 100.40364946964948, "y": 717.3045675653956 },
+        "data": {
+          "layerType": "ResidualBlock",
+          "label": "Residual Block",
+          "params": {
+            "in_channels": 256,
+            "out_channels": 512,
+            "num_blocks": 2,
+            "downsample": true
+          }
+        }
+      },
+      {
+        "id": "8",
+        "type": "default",
+        "position": { "x": 100.21227920003068, "y": 847.6617389037519 },
+        "data": {
+          "layerType": "Linear",
+          "label": "Linear Layer",
+          "params": {
+            "in_features": 512,
+            "out_features": 1000
+          }
+        }
+      }
+    ],
+    "edges": [
+      { "id": "e1-2", "source": "1", "target": "2" },
+      { "id": "e2-3", "source": "2", "target": "3" },
+      { "id": "e3-4", "source": "3", "target": "4" },
+      { "id": "e4-5", "source": "4", "target": "5" },
+      { "id": "e5-6", "source": "5", "target": "6" },
+      { "id": "e6-7", "source": "6", "target": "7" },
+      { "id": "e7-8", "source": "7", "target": "8" }
+    ]
+  },
+  {
+    "name": "DeepConvNet",
+    "nodes": [
+      {
+        "id": "input",
+        "type": "input",
+        "position": {
+          "x": 109.5,
+          "y": -48.5
+        },
+        "data": {
+          "layerType": "Input Layer",
+          "label": "Input Layer",
+          "params": {}
+        }
+      },
+      {
+        "id": "node_2",
+        "type": "default",
+        "position": {
+          "x": 109,
+          "y": 15.75
+        },
+        "data": {
+          "layerType": "Conv2d",
+          "label": "Conv2d Layer",
+          "params": {
+            "in_channels": 1,
+            "out_channels": "8",
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 0
+          }
+        }
+      },
+      {
+        "id": "node_3",
+        "type": "default",
+        "position": {
+          "x": 108.51293030662455,
+          "y": 121.76293030662455
+        },
+        "data": {
+          "layerType": "ReLU",
+          "label": "ReLU Layer",
+          "params": {}
+        }
+      },
+      {
+        "id": "node_4",
+        "type": "default",
+        "position": {
+          "x": 108.71998407571735,
+          "y": 189.62069693375432
+        },
+        "data": {
+          "layerType": "MaxPool2d",
+          "label": "MaxPool2d Layer",
+          "params": {}
+        }
+      },
+      {
+        "id": "node_5",
+        "type": "default",
+        "position": {
+          "x": 108.50392579610654,
+          "y": 256.2523931498893
+        },
+        "data": {
+          "layerType": "Conv2d",
+          "label": "Conv2d Layer",
+          "params": {
+            "in_channels": "8",
+            "out_channels": "16",
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 0
+          }
+        }
+      },
+      {
+        "id": "node_6",
+        "type": "default",
+        "position": {
+          "x": 108.44563372172064,
+          "y": 361.38866480858735
+        },
+        "data": {
+          "layerType": "ReLU",
+          "label": "ReLU Layer",
+          "params": {}
+        }
+      },
+      {
+        "id": "node_7",
+        "type": "default",
+        "position": {
+          "x": 108.44563372172067,
+          "y": 439.2666544537486
+        },
+        "data": {
+          "layerType": "MaxPool2d",
+          "label": "MaxPool2d Layer",
+          "params": {}
+        }
+      },
+      {
+        "id": "node_8",
+        "type": "default",
+        "position": {
+          "x": 108.44563372172067,
+          "y": 512.5090494771739
+        },
+        "data": {
+          "layerType": "Conv2d",
+          "label": "Conv2d Layer",
+          "params": {
+            "in_channels": "16",
+            "out_channels": 32,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 0
+          }
+        }
+      },
+      {
+        "id": "node_9",
+        "type": "default",
+        "position": {
+          "x": 108.44563372172067,
+          "y": 619.1277257770971
+        },
+        "data": {
+          "layerType": "ReLU",
+          "label": "ReLU Layer",
+          "params": {}
+        }
+      },
+      {
+        "id": "node_10",
+        "type": "default",
+        "position": {
+          "x": 108.44563372172061,
+          "y": 692.3701208005224
+        },
+        "data": {
+          "layerType": "MaxPool2d",
+          "label": "MaxPool2d Layer",
+          "params": {}
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "reactflow__edge-input-node_2",
+        "source": "input",
+        "target": "node_2",
+        "label": "",
+        "style": {
+          "stroke": "#4b5563",
+          "strokeDasharray": "",
+          "strokeWidth": 2
+        }
+      },
+      {
+        "id": "reactflow__edge-node_2-node_3",
+        "source": "node_2",
+        "target": "node_3",
+        "label": "",
+        "style": {
+          "stroke": "#4b5563",
+          "strokeDasharray": "",
+          "strokeWidth": 2
+        }
+      },
+      {
+        "id": "reactflow__edge-node_3-node_4",
+        "source": "node_3",
+        "target": "node_4",
+        "label": "",
+        "style": {
+          "stroke": "#4b5563",
+          "strokeDasharray": "",
+          "strokeWidth": 2
+        }
+      },
+      {
+        "id": "reactflow__edge-node_4-node_5",
+        "source": "node_4",
+        "target": "node_5",
+        "label": "",
+        "style": {
+          "stroke": "#4b5563",
+          "strokeDasharray": "",
+          "strokeWidth": 2
+        }
+      },
+      {
+        "id": "reactflow__edge-node_5-node_6",
+        "source": "node_5",
+        "target": "node_6",
+        "label": "",
+        "style": {
+          "stroke": "#4b5563",
+          "strokeDasharray": "",
+          "strokeWidth": 2
+        }
+      },
+      {
+        "id": "reactflow__edge-node_6-node_7",
+        "source": "node_6",
+        "target": "node_7",
+        "label": "",
+        "style": {
+          "stroke": "#4b5563",
+          "strokeDasharray": "",
+          "strokeWidth": 2
+        }
+      },
+      {
+        "id": "reactflow__edge-node_7-node_8",
+        "source": "node_7",
+        "target": "node_8",
+        "label": "",
+        "style": {
+          "stroke": "#4b5563",
+          "strokeDasharray": "",
+          "strokeWidth": 2
+        }
+      },
+      {
+        "id": "reactflow__edge-node_8-node_9",
+        "source": "node_8",
+        "target": "node_9",
+        "label": "",
+        "style": {
+          "stroke": "#4b5563",
+          "strokeDasharray": "",
+          "strokeWidth": 2
+        }
+      },
+      {
+        "id": "reactflow__edge-node_9-node_10",
+        "source": "node_9",
+        "target": "node_10",
+        "label": "",
+        "style": {
+          "stroke": "#4b5563",
+          "strokeDasharray": "",
+          "strokeWidth": 2
+        }
+      }
+    ]
+  }
+]

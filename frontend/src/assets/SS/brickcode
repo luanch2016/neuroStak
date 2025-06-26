@@ -1,0 +1,55 @@
+.brick-wrap {
+  cursor: pointer !important;
+  z-index: 10;
+  transform: perspective(1050px) translate3d(0px, 0px, 150px) rotateX(-10deg) scale(0.9, 0.9);
+  box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+  transition: 0.4s ease-in-out transform;
+  position: relative;
+  display: block;
+  width: auto;
+  padding-bottom: 8px;
+}
+
+.brick-wrap:hover {
+  transform: translate3d(0px, 5px, -150px);
+}
+
+.brick {
+  background: #000;
+  color: white;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.25rem;
+  min-width: 124px;
+}
+
+.brick-meta {
+  font-size: 0.6rem;
+  color: #ccc;
+}
+
+.brick-label {
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin: 2px 0;
+}
+
+.bits {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.bit {
+  width: 19px;
+  height: 8px;
+  background: #000;
+  margin: 0 6px;
+  border-radius: 2px 2px 0 0;
+}
+

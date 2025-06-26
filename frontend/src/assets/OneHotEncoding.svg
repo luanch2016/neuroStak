@@ -1,0 +1,10 @@
+<svg id="currentIcon" width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-labelledby="cnnIconTitle" role="img"> 
+<title>OneHotEncoding Icon</title>
+    <text x="20" y="58" font-family="Inter, sans-serif" font-size="24" text-anchor="middle" fill="#4f46e5">3</text>
+    <path d="M 35 50 L 45 50 L 45 45 L 55 55 L 45 65 L 45 60 L 35 60 Z" fill="#4b5563"/>
+    <circle cx="70" cy="25" r="5" fill="#d1d5db"/>
+    <circle cx="70" cy="40" r="5" fill="#d1d5db"/>
+    <circle cx="70" cy="55" r="6" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1"/>
+    <circle cx="70" cy="70" r="5" fill="#d1d5db"/>
+    <circle cx="70" cy="85" r="5" fill="#d1d5db"/>
+</svg>

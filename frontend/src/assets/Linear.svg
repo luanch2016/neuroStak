@@ -1,0 +1,11 @@
+<svg id="currentIcon" width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-labelledby="cnnIconTitle" role="img"> 
+        <title>Linear Layer Icon</title>
+    <circle cx="25" cy="25" r="6" fill="#6b7280"/>
+    <circle cx="25" cy="50" r="6" fill="#6b7280"/>
+    <circle cx="25" cy="75" r="6" fill="#6b7280"/>
+    <circle cx="75" cy="50" r="8" fill="#3b82f6"/>
+    <path d="M 31 27 L 69 48" stroke="#9ca3af" stroke-width="1.5"/>
+    <path d="M 31 50 L 69 50" stroke="#9ca3af" stroke-width="1.5"/>
+    <path d="M 31 73 L 69 52" stroke="#9ca3af" stroke-width="1.5"/>
+</svg>
+

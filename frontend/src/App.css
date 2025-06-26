@@ -1,0 +1,444 @@
+/* App.css */
+
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.flow-wrapper {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.right-panel {
+  width: 320px;
+  border-left: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.editor-panel {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  min-height: 0;
+}
+
+.console-panel {
+  height: 160px;
+  overflow-y: auto;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+  background: #f9f9f9;
+}
+
+.button-panel {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  z-index: 10;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.button-generate {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button-export {
+  background-color: #f54242;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button-save {
+  background-color: #10b981;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button-load {
+  background-color: #f59e0b;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.button-load input[type="file"] {
+  display: none;
+}
+
+.console-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.console-line {
+  margin: 0.25rem 0;
+}
+
+.layer-button {
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0;
+  flex: 1 1 100px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f3f4f6;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.layer-button-icon {
+  margin-right: 0.5rem;
+}
+
+.layer-button-text {
+  flex-grow: 1;
+}
+
+.edge-valid {
+  stroke: #4b5563;
+  stroke-width: 2;
+}
+
+.edge-invalid {
+  stroke: red;
+  stroke-width: 2;
+}
+
+.edge-skip {
+  stroke: #f59e0b;
+  stroke-dasharray: 5, 5;
+  stroke-width: 2;
+}
+
+.btn {
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn.blue {
+  background-color: #2563eb;
+}
+
+.btn.red {
+  background-color: #f54242;
+}
+
+.btn.green {
+  background-color: #10b981;
+}
+
+.btn.orange {
+  background-color: #f59e0b;
+}
+
+.btn.gray {
+  background-color: gray;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  background-color: black;
+}
+.layer-navbar-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.layer-navbar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+  cursor: grab;
+  border: 1px ;
+  border-radius: 8px;
+  background-color: transparent;
+  transition: box-shadow 0.2s ease;
+  width: 70%;
+  margin: 0.3rem;
+}
+
+.layer-navbar-item:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.layer-navbar-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.layer-navbar-item span {
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  text-align: center;
+}
+
+.side-panel {
+  width: 320px;
+  border-left: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.editor-panel {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  min-height: 0;
+}
+
+.model-library-panel {
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+  background: #f5f5f5;
+  height: 200px;
+  overflow-y: auto;
+}
+
+.panel-heading {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.model-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.model-item {
+  margin-bottom: 0.5rem;
+}
+
+.btn.violet {
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn.violet:hover {
+  background-color: #7c3aed;
+}
+
+.model-header {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 11;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.1rem;
+}
+
+.model-header input {
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  width: 200px;
+}
+
+.button-bar {
+  position: absolute;
+  top: calc(60px + 0.1rem);
+  left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Style for aligning and styling in/out channel text and label in a single line for each layer node */
+.layer-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.75rem;
+  background-color: #f3f4f6;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.layer-label span {
+  margin: 0 4px;
+}
+
+.react-flow__node-default {
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 0.75rem;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: none;
+  word-break: break-word;
+  width: auto;
+  max-width: 100%;
+}
+
+/* Layer Grouping Dropdown Styles */
+.layer-group {
+  width: 9%;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.layer-group-toggle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: 1px;
+  border-radius: 6px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  position: relative;
+  color: white;
+}
+
+.layer-group-toggle:hover {
+  background-color: #d1d5db;
+}
+
+.layer-group-content {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #e0e0e0;
+  border: none;
+  z-index: 1000;
+  min-width: 150px;
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2), inset 0 0 10px rgba(255, 255, 255, 0.3);
+  background-image: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: opacity 0.2s ease;
+}
+
+.layer-group:hover .layer-group-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+/* Remove padding, margin, background, border, and box-shadow from .network-canvas */
+.network-canvas {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+/* Export Button Dropdown Styles */
+.export-dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 20;
+}
+
+.export-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #4b5563;
+  min-width: 150px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  border-radius: 6px;
+  padding: 0.5rem 0;
+  z-index: 30;
+}
+
+.export-dropdown:hover .export-options {
+  display: flex;
+}
+
+.export-options button {
+  background-color: #4b5563;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+}
+
+.export-options button:hover {
+  background-color: #374151;
+}
+
+h4
+{
+ margin: 0.2rem;
+}
+.navbar-logo{
+  width: 100px;
+
+}
+p {
+  color: white;
+  text-align: center;
+}

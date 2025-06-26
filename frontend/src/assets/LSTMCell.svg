@@ -1,0 +1,13 @@
+<svg id="currentIcon" width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-labelledby="cnnIconTitle" role="img"> 
+    <title>LSTMCell Icon</title>
+    <rect x="25" y="25" width="50" height="50" fill="#e0f2f1" stroke="#10b981" stroke-width="2" rx="8"/>
+    <!-- Cell state line -->
+    <line x1="25" y1="35" x2="75" y2="35" stroke="#f59e0b" stroke-width="2.5"/>
+    <!-- Input/Forget Gate -->
+    <path d="M 35 75 V 60 H 45 V 75" stroke="#047857" stroke-width="2" fill="none"/>
+    <circle cx="40" cy="55" r="3" fill="#047857"/>
+    <!-- Output Gate -->
+    <path d="M 55 75 V 60 H 65 V 75" stroke="#047857" stroke-width="2" fill="none"/>
+    <circle cx="60" cy="55" r="3" fill="#047857"/>
+</svg>
+

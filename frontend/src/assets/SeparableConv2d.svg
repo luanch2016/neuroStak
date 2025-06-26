@@ -1,0 +1,11 @@
+<svg id="currentIcon" width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-labelledby="cnnIconTitle" role="img"> 
+    <title>SeparableConv2d Icon</title>
+    <!-- Depthwise -->
+    <rect x="5" y="30" width="20" height="20" fill="#fca5a5" stroke="#ef4444" stroke-width="1"/>
+    <rect x="10" y="35" width="20" height="20" fill="#a7f3d0" stroke="#10b981" stroke-width="1"/>
+    <path d="M 35 45 L 45 45 L 45 40 L 55 50 L 45 60 L 45 55 L 35 55 Z" fill="#4b5563"/>
+    <!-- Pointwise (1x1 Conv) -->
+    <rect x="60" y="35" width="20" height="20" fill="#fde68a" stroke="#f59e0b" stroke-width="1" transform="skewX(-10)"/>
+    <rect x="60" y="35" width="5" height="5" fill="#f59e0b" stroke-width="0.5" stroke="#b45309"  transform="skewX(-10)"/>
+    <path d="M 85 45 L 95 50 L 85 55 Z" fill="#4b5563"/>
+</svg>
