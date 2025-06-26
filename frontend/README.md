@@ -55,6 +55,8 @@ npm run dev
 
 The app will be available at [http://localhost:5173](http://localhost:5173)
 
+Live Page: https://neuro-stak-8ou9.vercel.app/
+
 ## 📁 Folder Structure
 
 ```
