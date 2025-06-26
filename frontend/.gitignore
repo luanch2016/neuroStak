@@ -47,3 +47,5 @@ jspm_packages/
 .parcel-cache/
 .next/
 .turbo/
+# Local utility scripts
+check-missing-icons.cjs
