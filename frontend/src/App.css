@@ -442,3 +442,29 @@ p {
   color: white;
   text-align: center;
 }
+.prompt-panel {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fafafa;
+}
+
+.prompt-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.prompt-input {
+  width: 100%;
+  resize: vertical;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.prompt-actions {
+  display: flex;
+  gap: 0.5rem;
+}

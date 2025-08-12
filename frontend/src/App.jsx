@@ -16,6 +16,8 @@ import LayerEditor from "./components/LayerEditor";
 import ButtonPanel from "./components/ButtonPanel";
 import ConsoleLog from "./components/ConsoleLog";
 import ModelLibraryPanel from "./components/ModelLibraryPanel";
+import PromptPanel from "./components/PromptPanel";
+import { promptToGraph } from "./utils/promptParser.js";
 
 import {
   onConnectHandler,
@@ -46,6 +48,44 @@ export default function App() {
   const [history, setHistory] = useState([]);
   const [redoStack, setRedoStack] = useState([]);
   const [showExportOptions, setShowExportOptions] = useState(false);
+
+  const handleGenerateFromPrompt = useCallback(
+    (text) => {
+      // Save current state for undo
+      setHistory((h) => [...h, { nodes, edges }]);
+
+      // Generate nodes/edges from prompt
+      const { nodes: genNodes, edges: genEdges } = promptToGraph(text, {
+        input: { shape: "[1, 28, 28]" },
+        spacingY: 100,
+        startX: 100,
+        startY: 50,
+      });
+
+      // Enrich nodes with onClick so selection keeps working
+      const enriched = genNodes.map((n) => ({
+        ...n,
+        data: {
+          ...n.data,
+          onClick: () => setSelectedNode(n),
+        },
+      }));
+
+      setNodes(enriched);
+      setEdges(genEdges);
+      setSelectedNode(null);
+
+      // Optionally validate and log
+      try {
+        validateEdges(enriched, genEdges);
+      } catch (e) {
+        // ignore; validation util already logs
+      }
+
+      if (typeof log === "function") log("✨ Built graph from prompt");
+    },
+    [nodes, edges, setNodes, setEdges, setHistory, setSelectedNode]
+  );
 
   const log = (msg) => logMessage(msg, setLogs);
 
@@ -319,6 +359,7 @@ export default function App() {
         </div>
 
         <div className="side-panel">
+          <PromptPanel onGenerateFromPrompt={handleGenerateFromPrompt} />
           <div className="editor-panel">
             {selectedNode && <LayerEditor selectedNode={selectedNode} updateNode={updateNode} />}
           </div>
