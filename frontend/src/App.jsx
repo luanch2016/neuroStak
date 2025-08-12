@@ -25,7 +25,7 @@ import {
   logMessage,
   onDragOverHandler,
 } from "./utils/nodeUtils";
-import { generatePyTorchCode, saveModel, loadModel } from "./utils/codeUtils";
+import { generatePyTorchCode, generateTensorFlowCode, saveModel, loadModel } from "./utils/codeUtils";
 import initialNodes from "./flowConfig";
 import "@fontsource/work-sans/400.css";
 
@@ -207,6 +207,14 @@ export default function App() {
                       }
                     >
                       Pytorch
+                    </button>
+                    <button
+                      className="btn gray"
+                      onClick={() =>
+                        generateTensorFlowCode(nodes, edges, true, log, modelName)
+                      }
+                    >
+                      TensorFlow
                     </button>
                     <button className="btn gray" onClick={handleExportSVG}>
                       .SVG

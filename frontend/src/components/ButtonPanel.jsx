@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css"; // if styles are here
 
-export default function ButtonPanel({ onGenerate, onExport, onSave, onLoad, onClear, onUndo, onRedo, onExportSVG, onExportPDF }) {
+export default function ButtonPanel({ onGenerate, onExport, onExportTF, onExportSVG, onExportPDF, onSave, onLoad, onClear, onUndo, onRedo }) {
     return (
       <div className="button-panel">
         {/*<button className="btn blue" onClick={onGenerate}>
@@ -10,7 +10,8 @@ export default function ButtonPanel({ onGenerate, onExport, onSave, onLoad, onCl
         <div className="dropdown">
           <button className="btn gray">Export Options ▼</button>
           <div className="dropdown-menu">
-            <button className="btn gray" onClick={onExport}>Export .py</button>
+            <button className="btn gray" onClick={onExport}>Pytorch</button>
+            <button className="btn gray" onClick={onExportTF}>Tensorflow</button>
             <button className="btn gray" onClick={onExportSVG}>Export SVG</button>
             <button className="btn gray" onClick={onExportPDF}>Export PDF</button>
             <button className="btn gray" onClick={onSave}>Save Model</button>
